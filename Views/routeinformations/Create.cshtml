@@ -1,0 +1,47 @@
+﻿@model Tms2.Models.routeinformation
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>routeinformation</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="vehiclenumber" class="control-label"></label>
+                <input asp-for="vehiclenumber" class="form-control" />
+                <span asp-validation-for="vehiclenumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stops" class="control-label"></label>
+                <select class="form-control" id="Stops" name="Stops">
+                    <option>Select Option</option>
+                    <option>TNnagar</option>
+                    <option>Adayar</option>
+                    <option>Palladam</option>
+
+
+
+                </select>
+             
+                <span asp-validation-for="stops" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="AddRoute" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

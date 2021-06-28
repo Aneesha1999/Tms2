@@ -1,0 +1,39 @@
+﻿@model Tms2.Models.routeinformation
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>routeinformation</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="rootnumber" />
+            <div class="form-group">
+                <label asp-for="vehiclenumber" class="control-label"></label>
+                <input asp-for="vehiclenumber" class="form-control" />
+                <span asp-validation-for="vehiclenumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stops" class="control-label"></label>
+                <input asp-for="stops" class="form-control" />
+                <span asp-validation-for="stops" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

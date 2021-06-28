@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container-fluid">
+    <h1 class="display-4"> Welcome to Fastrack Transports</h1>
+</div>
+<img src="~/css/transport-management-system-1-638.jpg" height="500" width="1000" />
+    
+<div>
+    <hr />
+    <img src="~/css/download.png" height="50" width="50" />
+    <a class="btn btn-primary btn-group-lg" asp-controller="vehicleinformations" asp-action="Create" role="button">AddVehicle</a>
+    <hr />
+
+    <img src="/css/employee.png" height="50" width="50" />
+    <a class="btn btn-primary btn-group-lg" asp-controller="employeeinfoes" asp-action="Create">Addemployeeinformation</a>
+    <hr />
+    <img src="/js/routeimage.png" height="50" width="50" />
+    <a class="btn btn-primary btn-group-toggle" asp-controller="routeinformations" asp-action="Create">Addrouteinformation</a>
+    <hr />
+    <a class="btn btn-primary btn-group-toggle" asp-controller="allocatevehicles1" asp-action="Create">Allocatevehicle to passenger</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
